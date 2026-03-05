@@ -4,8 +4,8 @@ import { AppError } from "../utils";
 export class CrudRepository<T>{
   constructor(protected model: Model<T>){}
 
-  async create(data: T){
-    const response = await this.model.create(data)
+  async create(data: Record<string, unknown>){
+    const response = await this.model.create(data as T)
     return response
   }
   async destroy(id: string){

@@ -31,6 +31,7 @@ const userSchema: Schema<IUser> = new Schema({
   role: {
     type: String,
     enum: ["user", "admin"],
+    default: "user",
     required: true
   },
   location:{
