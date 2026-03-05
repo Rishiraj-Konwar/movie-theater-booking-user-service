@@ -32,11 +32,10 @@ const userSchema: Schema<IUser> = new Schema({
     type: String,
     enum: ["user", "admin"],
     default: "user",
-    required: true
   },
   location:{
     type: String,
-    rquired: true
+    required: true
   }
 })
 
